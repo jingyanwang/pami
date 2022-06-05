@@ -95,10 +95,13 @@ else:
 def arabic_to_buckwalter(
   text,
   ):
-  if args.toUTF == '':
-    for k in abjad:
-      text = text.replace(k, abjad[k])
-  return text
+  try:
+    if args.toUTF == '':
+      for k in abjad:
+        text = text.replace(k, abjad[k])
+    return text
+  except:
+    return text
 
 
 '''
